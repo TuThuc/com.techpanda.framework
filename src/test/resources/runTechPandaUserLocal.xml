@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="TechPanda">
+    <parameter name ="envName" value = "local"/>
+    <parameter name ="serverName" value = "dev"/>
+
+    <listeners>
+<!--        <listener class-name ="commons.MethodListener"/>-->
+     <listener class-name="reportConfig.ExtentTestListener"/>
+    </listeners>
+    <test name="Run on firefox ">
+        <parameter name = "browserName" value = "firefox"/>
+        <!--   <test name="Run on chrome ">
+          <parameter name = "browserName" value = "chrome"/> -->
+        <classes>
+            <!-- <class name="com.nopcomerce.common.Common_01_Register_Cookie"/> -->
+            <class name="com.techpanda.account.Account_01_Register"/>
+        </classes>
+    </test>
+
+</suite>

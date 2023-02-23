@@ -6,12 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.admin.AdminLoginPageObject;
-import pageObjects.user.*;
-import pageObjects.wordpress.AdminDashboardPO;
-import pageObjects.wordpress.UserHomePO;
-import pageUIs.jQuery.uploadFile.BasePageJQueryUI;
-import pageUIs.user.BasePageNopComerceUI;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -553,7 +547,7 @@ public class BasePage {
 		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(locatorType)));
 	}
 
-	public void uploadMultipleFiles(WebDriver driver, String... fileName) {
+	/*public void uploadMultipleFiles(WebDriver driver, String... fileName) {
 		String filePath = GlobalConstants.UPLOAD_FILE;
 		// Đường dẫn của tất cả các file
 		// 1 file: test.png
@@ -617,79 +611,79 @@ public class BasePage {
 		clickToElement(driver, BasePageNopComerceUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
 	}
 
-	/**
+	*//**
 	 * Enter to dynamic Textbox by ID
 	 * 
 	 * @author Tu Thuc
 	 * @param driver
 	 * @param textboxID
 	 * @param value
-	 */
+	 *//*
 	public void inputTextboxByID(WebDriver driver, String textboxID, String value) {
 		waitForElementVisible(driver, BasePageNopComerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
 		sendkeyToElement(driver, BasePageNopComerceUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
 
 	}
 
-	/**
+	*//**
 	 * Click to dynamic Button by text
 	 * 
 	 * @author Tu Thuc
 	 * @param driver
 	 * @param buttonText
-	 */
+	 *//*
 	public void clickToButtonByText(WebDriver driver, String buttonText) {
 		waitForElementClickable(driver, BasePageNopComerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
 		clickToElement(driver, BasePageNopComerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
 
 	}
 
-	/**
+	*//**
 	 * Select item in Dropdown by name attribute
 	 * 
 	 * @author Tu Thuc
 	 * @param driver
 	 * @param dropdownAttributeName
 	 * @param itemValue
-	 */
+	 *//*
 
 	public void selectToDropdownByName(WebDriver driver, String dropdownAttributeName, String itemValue) {
 		waitForElementClickable(driver, BasePageNopComerceUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttributeName);
 		selectItemInDefaultDropdown(driver, BasePageNopComerceUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttributeName);
 	}
 
-	/**
+	*//**
 	 * Click to dynamicCheckbox by label
 	 * 
 	 * @author Tu Thuc
 	 * @param driver
 	 * @param radioButtonLabelName
-	 */
+	 *//*
 	public void clickToCheckboxByLabel(WebDriver driver, String radioButtonLabelName) {
 		waitForElementClickable(driver, BasePageNopComerceUI.DYNAMIC_CHECKBOX_BY_LABEL, radioButtonLabelName);
 		checkToDefaultCheckboxRadio(driver, BasePageNopComerceUI.DYNAMIC_CHECKBOX_BY_LABEL, radioButtonLabelName);
 	}
 
-	/**
+	*//**
 	 * Click to dynamic Radio by label
 	 * 
 	 * @author Tu Thuc
 	 * @param driver
 	 * @param radioButtonLabelName
 	 * @param itemValue
-	 */
+	 *//*
 	public void clickToRadioByLabel(WebDriver driver, String radioButtonLabelName) {
 		waitForElementClickable(driver, BasePageNopComerceUI.DYNAMIC_RADIO_BY_LABEL, radioButtonLabelName);
 		checkToDefaultCheckboxRadio(driver, BasePageNopComerceUI.DYNAMIC_RADIO_BY_LABEL, radioButtonLabelName);
 	}
 
-	/**
+	*//**
 	 * Get value in textbox by textboxID
 	 * 
 	 * @author Tu Thuc
 	 * @param driver
 	 * @param textboxID
-	 */
+	 *//*
 	public String getTextboxValueByID(WebDriver driver, String textboxID) {
 		waitForElementVisible(driver, BasePageNopComerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
 		return getElementAttribute(driver, BasePageNopComerceUI.DYNAMIC_TEXTBOX_BY_ID, "value", textboxID);
@@ -717,7 +711,7 @@ public class BasePage {
 	public AdminDashboardPO openAdminSite(WebDriver driver, String adminUrl) {
 		openPageUrl(driver, adminUrl);
 		return pageObjects.wordpress.PageGeneratorManager.getAdminDashboardPage(driver);
-	}
+	}*/
 
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;

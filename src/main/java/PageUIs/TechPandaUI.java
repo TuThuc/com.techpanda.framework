@@ -33,8 +33,11 @@ public class TechPandaUI {
         public static final String ACCOUNT_LINK = "xpath=//div[@class='account-cart-wrapper']//span[text()='Account']";
         public static final String REGISTER_LINK = "xpath=//a[text()= 'Register']";
     }
-    public static class AcountInfomationPageUI{
-
+    public static class MyAccountPageUI{
+        public static final String CONTACT_INFOR_TEXT = "xpath=//h3[text()='Contact Information']/parent::div/following-sibling::div[@class='box-content']";
+        public static final String REGISTER_SUCCESS_MESSAGE = "xpath=//li[@class='success-msg']//span";
+        public static final String ACCOUNT_LINK= "xpath=//div[@class= 'account-cart-wrapper']//span[text()='Account']";
+        public static final String LOGOUT_LINK= "xpath=//a[text()='Log Out']";
     }
     public static class MyApplicationPageUI{
 

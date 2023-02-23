@@ -1,6 +1,8 @@
 package pageObjects;
 
+import PageUIs.TechPandaUI;
 import commons.BasePage;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
     public class MyAccountPageObject extends BasePage {
 
@@ -11,29 +13,29 @@ import org.openqa.selenium.WebDriver;
         }
 
         public void clickToMyAccountLink() {
-            waitForElementVisible(driver, MyAccountPageUI.ACCOUNT_LINK);
-            clickToElement(driver, MyAccountPageUI.ACCOUNT_LINK);
+            waitForElementVisible(driver, TechPandaUI.MyAccountPageUI.ACCOUNT_LINK);
+            clickToElement(driver,TechPandaUI.MyAccountPageUI.ACCOUNT_LINK);
 
         }
 
         public HomePageObject clickToLogoutLink() {
-            waitForElementVisible(driver, MyAccountPageUI.LOGOUT_LINK);
-            clickToElement(driver, MyAccountPageUI.LOGOUT_LINK);
+            waitForElementVisible(driver, TechPandaUI.MyAccountPageUI.LOGOUT_LINK);
+            clickToElement(driver, TechPandaUI.MyAccountPageUI.LOGOUT_LINK);
             return PageGeneratorManager.getHomePage(driver);
         }
 
         public String getRegisterSuccessMessage() {
-            waitForElementVisible(driver, MyAccountPageUI.REGISTER_SUCCESS_MESSAGE);
-            return getElementText(driver, MyAccountPageUI.REGISTER_SUCCESS_MESSAGE);
+            waitForElementVisible(driver, TechPandaUI.MyAccountPageUI.REGISTER_SUCCESS_MESSAGE);
+            return getElementText(driver, TechPandaUI.MyAccountPageUI.REGISTER_SUCCESS_MESSAGE);
 
 
         }
 
         public boolean isContactInforDisplayed(String contacInfor) {
-            waitForElementVisible(driver, MyAccountPageUI.CONTACT_INFOR_TEXT);
-            String actualContactInforText = getElementText(driver, MyAccountPageUI.CONTACT_INFOR_TEXT);
+            waitForElementVisible(driver, TechPandaUI.MyAccountPageUI.CONTACT_INFOR_TEXT);
+            String actualContactInforText = getElementText(driver, TechPandaUI.MyAccountPageUI.CONTACT_INFOR_TEXT);
             return actualContactInforText.contains(contacInfor);
         }
 
     }
-}
+
