@@ -11,11 +11,10 @@ public class HeadlessChromeDriverManager implements BrowserFactory {
 
     @Override
     public WebDriver getBrowserDriver() {
-        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
+        options.addArguments("--headless");
         options.addArguments("window-size = 1920x1080");
-        return new ChromeDriver(options);
+        return WebDriverManager.chromedriver().capabilities(options).create();
     }
 
 }

@@ -31,8 +31,8 @@ public class Account_01_Register extends BaseTest {
         invalidPassword = "123";
     }
 
-    @Test()
-    public void Account_01_Register_With_Infor_Empty(Method method) {
+    @Test(priority = 1)
+    public void Account_01_Register01_With_Infor_Empty(Method method) {
         ExtentManager.startTest(method.getName(), "Account_01_Register_With_Infor_Empty");
         ExtentManager.getTest().log(Status.INFO, "Register - Step 01: Click to Account Link");
         homePage.clickToAccountLink();
@@ -59,7 +59,7 @@ public class Account_01_Register extends BaseTest {
 
     }
 
-    @Test()
+    @Test(priority = 2)
     public void Account_01_Register_With_Infor_Invalid(Method method) {
         ExtentManager.startTest(method.getName(), "Account_01_Register_With_Infor_Invalid");
         ExtentManager.getTest().log(Status.INFO, "Register - Step 01: Click to Account Link");
@@ -93,7 +93,7 @@ public class Account_01_Register extends BaseTest {
         verifyEquals(registerPage.getInvalidConfirmPasswordErrorMessage(), "Please make sure your passwords match.");
     }
 
-    @Test()
+    @Test(priority = 3)
     public void Account_01_Register_Successful(Method method) {
         ExtentManager.startTest(method.getName(), "Account_01_Register_Successful");
         ExtentManager.getTest().log(Status.INFO, "Register - Step 01: Click to Account Link");

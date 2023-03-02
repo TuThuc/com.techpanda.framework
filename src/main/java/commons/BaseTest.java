@@ -62,40 +62,11 @@ public class BaseTest {
         return driver;
     }
 
-    protected WebDriver getBrowserDrivers(String envName, String browserName, String appURL, String ipAddress, String portNumber, String osName, String osVersion) {
-        switch (envName) {
-            case "local":
-                driver = new LocalFactory(browserName).creatDriver();
-                break;
-            case "grid":
-                driver = new GridFactory(browserName, ipAddress, portNumber).creatDriver();
-                break;
-            case "browserStack":
-                driver = new BrowserstackFactory(browserName, osName, osVersion).creatDriver();
-
-                break;
-            case "sauceLab":
-                driver = new SauceLabFactory(browserName, osName).creatDriver();
-                break;
-            case "Lambda":
-                driver = new LambdaFactory(browserName, osName).creatDriver();
-                break;
-            default:
-                driver = new LocalFactory(browserName).creatDriver();
-
-                break;
-        }
-        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get(appURL);
-        return driver;
-    }
-
     private String getEnvironmentURL(String serverName) {
         String envURL = null;
         EnvironmentList environment = EnvironmentList.valueOf(serverName.toUpperCase());
         if (environment == EnvironmentList.DEV) {
-            envURL = "https://demo.nopcommerce.com";
+            envURL = "http://live.techpanda.org";
         } else if (environment == EnvironmentList.TESTING) {
             envURL = "https://demo.nopcommerce.com";
         } else if (environment == EnvironmentList.STAGING) {

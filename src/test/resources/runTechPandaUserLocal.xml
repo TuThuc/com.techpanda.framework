@@ -7,10 +7,15 @@
 <!--        <listener class-name ="commons.MethodListener"/>-->
      <listener class-name="reportConfig.ExtentTestListener"/>
     </listeners>
-    <test name="Run on firefox ">
+  <!--  <test name="Run on firefox ">
         <parameter name = "browserName" value = "firefox"/>
-        <!--   <test name="Run on chrome ">
-          <parameter name = "browserName" value = "chrome"/> -->
+    <classes>
+        &lt;!&ndash; <class name="com.nopcomerce.common.Common_01_Register_Cookie"/> &ndash;&gt;
+        <class name="com.techpanda.account.Account_01_Register"/>
+    </classes>
+    </test>-->
+           <test name="Run on chrome ">
+          <parameter name = "browserName" value = "H_FIREFOX"/>
         <classes>
             <!-- <class name="com.nopcomerce.common.Common_01_Register_Cookie"/> -->
             <class name="com.techpanda.account.Account_01_Register"/>

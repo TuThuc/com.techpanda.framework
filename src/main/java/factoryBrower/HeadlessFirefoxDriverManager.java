@@ -11,12 +11,10 @@ public class HeadlessFirefoxDriverManager implements BrowserFactory {
 
     @Override
     public WebDriver getBrowserDriver() {
-        WebDriverManager.firefoxdriver().setup();
-        // Brower Options: selenium 3.xx
         FirefoxOptions options = new FirefoxOptions();
-        options.setHeadless(true);
+        options.addArguments("-headless");
         options.addArguments("window-size = 1920x1080");
-        return new FirefoxDriver(options);
+        return WebDriverManager.firefoxdriver().capabilities(options).create();
     }
 
 }
